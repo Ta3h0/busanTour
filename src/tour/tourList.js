@@ -26,7 +26,7 @@ const TourList = () => {
             try {
                 /* 변수값이 들어갈때는 1옆에 물결표에 있는 `를 사용해야함 */
                 /* 안에서 변수를 선언할때는 ``로 요청값을 감싸주고 ${변수명}으로 선언하여 입력해주어야 "key"라는 문자열값이 아니라 변수명 key값으로 받아오게 된다. */
-                const response = await axios.get(`http://apis.data.go.kr/6260000/AttractionService/getAttractionKr?serviceKey=${key}&numOfRows=10&pageNo=1&resultType=json`);
+                const response = await axios.get(`https://apis.data.go.kr/6260000/AttractionService/getAttractionKr?serviceKey=${key}&numOfRows=10&pageNo=1&resultType=json`);
 
                 setTour (response.data.getAttractionKr.item)
 
